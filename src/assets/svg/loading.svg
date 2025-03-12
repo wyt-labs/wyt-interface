@@ -1,0 +1,47 @@
+<svg id="circle" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"
+  style="max-width: 100%; max-height: 100%;">
+  <path
+    d="M99.5688 138.069C120.832 138.069 138.069 120.832 138.069 99.5691C138.069 78.3061 120.832 61.0691 99.5688 61.0691C78.3058 61.0691 61.0688 78.3061 61.0688 99.5691C61.0688 120.832 78.3058 138.069 99.5688 138.069Z"
+    stroke="url(#paint0_linear_1_6)" stroke-width="5" stroke-dasharray="0,0,61.54498287159741,180.39201358836354">
+    <animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="indefinite" dur="2.02826891606682s"
+      values="0,0,61.54498287159741,180.39201358836354; 
+          0,180.39201358836354,61.54498287159741,0; 
+          61.54498287159741,180.39201358836354,0,0" keyTimes="0; 0.745615661217061; 1" begin="0.6219591707685929s">
+    </animate>
+  </path>
+  <path
+    d="M99.5688 138.069C120.832 138.069 138.069 120.832 138.069 99.5691C138.069 78.3061 120.832 61.0691 99.5688 61.0691C78.3058 61.0691 61.0688 78.3061 61.0688 99.5691C61.0688 120.832 78.3058 138.069 99.5688 138.069Z"
+    stroke="url(#paint1_linear_1_6)" stroke-width="5" stroke-dasharray="0,0,57.02741470808723,184.9095817518737">
+    <animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="indefinite" dur="2.1429773860874892s"
+      values="0,0,57.02741470808723,184.9095817518737; 
+          0,184.9095817518737,57.02741470808723,0; 
+          57.02741470808723,184.9095817518737,0,0" keyTimes="0; 0.7642881595517992; 1" begin="0.42601532630877564s">
+    </animate>
+  </path>
+  <path
+    d="M99.5688 138.069C120.832 138.069 138.069 120.832 138.069 99.5691C138.069 78.3061 120.832 61.0691 99.5688 61.0691C78.3058 61.0691 61.0688 78.3061 61.0688 99.5691C61.0688 120.832 78.3058 138.069 99.5688 138.069Z"
+    stroke="url(#paint2_linear_1_6)" stroke-width="5" stroke-dasharray="0,0,51.74492458650582,190.19207187345512">
+    <animate attributeType="XML" attributeName="stroke-dasharray" repeatCount="indefinite" dur="2.3401915974396985s"
+      values="0,0,51.74492458650582,190.19207187345512; 
+          0,190.19207187345512,51.74492458650582,0; 
+          51.74492458650582,190.19207187345512,0,0" keyTimes="0; 0.7861223155464391; 1" begin="0.9914764311307089s">
+    </animate>
+  </path>
+  <defs>
+    <linearGradient id="paint0_linear_1_6" x1="94.3622" y1="136.829" x2="105.757" y2="58.5062"
+      gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6"></stop>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"></stop>
+    </linearGradient>
+    <linearGradient id="paint1_linear_1_6" x1="145.222" y1="111.974" x2="61" y2="141.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1663F9"></stop>
+      <stop offset="1" stop-color="#169AF9" stop-opacity="0"></stop>
+    </linearGradient>
+    <linearGradient id="paint2_linear_1_6" x1="99.5688" y1="58.5691" x2="99.5688" y2="140.569"
+      gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366F1"></stop>
+      <stop offset="1" stop-color="#6366F1" stop-opacity="0"></stop>
+    </linearGradient>
+  </defs>
+  <setting>{"type":"loader","speed":20,"random":0.8,"shift":0.5,"size":0.8,"rupture":16}</setting>
+</svg>

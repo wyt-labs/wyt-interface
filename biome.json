@@ -1,0 +1,28 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "formatter": {
+    "enabled": true,
+    "indentWidth": 2,
+    "indentStyle": "space",
+    "ignore": ["dist", ".umi", "*.json", "biome.json", "package.json", "pnpm-lock.yaml", "yarn.lock"]
+  },
+  "linter": {
+    "enabled": false,
+    "ignore": [
+      "node_modules",
+      "dist",
+      "build",
+      "out",
+      "coverage",
+      "*.js",
+      "*.d.ts",
+      "*.spec.ts",
+      "*.spec.tsx",
+      "*.jsx",
+      "mock-*"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+.chart-segment {
+  border-radius: 99px;
+  background: #f7fafc !important;
+  color: #6b7280;
+  padding: 3px;
+  border: 1px solid #e2e8f0;
+
+  .ant-segmented-item-selected {
+    border-radius: 99px;
+    background: #e2e8f0 !important;
+    color: #374151;
+  }
+
+  .ant-segmented-thumb {
+    background: #edf2f7 !important;
+    border-radius: 99px;
+  }
+
+  .ant-segmented-item-label {
+    min-height: 24px;
+    line-height: 24px;
+  }
+
+  .ant-segmented-thumb {
+    //transition-duration: 100s !important;
+    background: #e2e8f0 !important;
+  }
+
+  .ant-segmented-item:hover:not(.ant-segmented-item-selected):not(
+      .ant-segmented-item-disabled
+    ) {
+    background: #edf2f7 !important;
+    border-radius: 99px;
+    &::after {
+      background: #edf2f7 !important;
+      border-radius: 99px;
+    }
+  }
+}

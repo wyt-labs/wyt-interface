@@ -1,0 +1,37 @@
+.agent-card,
+.agent-card-disabled {
+  width: calc(50% - 4px);
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 126px;
+
+  &-star {
+    border: 1px solid #ffdd00;
+    border-radius: 8px;
+
+    &-num {
+      font-size: 10px;
+    }
+  }
+
+  &-tag {
+    background: rgba(24, 172, 198, 0.2);
+    border: 1px solid #18acc6;
+    border-radius: 8px;
+  }
+
+  &:hover {
+    background: #edf2f7;
+    border-color: rgba(113, 128, 150, 0.5);
+  }
+
+  &:active {
+    border-color: #718096;
+  }
+}
+
+.agent-card-disabled {
+  cursor: not-allowed;
+}

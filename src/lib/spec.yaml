@@ -1,0 +1,215 @@
+openapi: 3.0.0
+info:
+  title: Wallet Login API
+  version: 1.0.0
+  description: API for wallet login and user management
+
+servers:
+  - url: https://wyt.bauhiniachain.com
+
+paths:
+  /api/v1/user/is-expired:
+    get:
+      summary: Check if user identity has expired
+      operationId: isExpired
+      parameters:
+        - in: query
+          name: addr
+          required: true
+          schema:
+            type: string
+          description: Login address
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IsExpiredResponse'
+
+  /api/v1/user/nonce:
+    get:
+      summary: Get user's current nonce
+      operationId: getNonce
+      parameters:
+        - in: query
+          name: addr
+          required: true
+          schema:
+            type: string
+          description: Login address
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NonceResponse'
+
+  /api/v1/user/signin:
+    post:
+      summary: Verify user signature and login
+      operationId: signIn
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SignInRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SignInResponse'
+
+  /api/v1/user/info:
+    get:
+      summary: Get user information
+      operationId: getUserInfo
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserInfoResponse'
+  /api/v1/chat:
+    post:
+      summary: Send a chat message
+      operationId: chat
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChatResponse'
+
+components:
+  schemas:
+    IsExpiredResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+        data:
+          type: boolean
+          description: true if expired
+        message:
+          type: string
+
+    NonceResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+        data:
+          type: object
+          properties:
+            nonce:
+              type: string
+            issue_at:
+              type: integer
+              format: int64
+        message:
+          type: string
+
+    SignInRequest:
+      type: object
+      required:
+        - addr
+        - signature
+        - nonce
+        - message
+      properties:
+        addr:
+          type: string
+        signature:
+          type: string
+        nonce:
+          type: string
+        message:
+          type: string
+
+    SignInResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+        data:
+          type: object
+          properties:
+            address:
+              type: string
+            token:
+              type: string
+            expired_date:
+              type: string
+        message:
+          type: string
+
+    UserInfoResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+        data:
+          type: object
+          properties:
+            address:
+              type: string
+            username:
+              type: string
+            create_at:
+              type: string
+        message:
+          type: string
+    ChatRequest:
+      type: object
+      required:
+        - chat_id
+        - text
+      properties:
+        chat_id:
+          type: string
+          description: The chat id of the message
+        text:
+          type: string
+          description: The text of the message
+    ChatResponse:
+      type: object
+      properties:
+        code:
+          type: integer
+        data:
+          type: object
+          required:
+            - chat_id
+            - text
+          properties:
+            chat_id:
+              type: string
+              description: The chat id of the message
+            text:
+              type: string
+              description: The text of the message
+            widget:
+              type: object
+              description: The widget of the message. Can be null if no widget is rendered
+              properties:
+                name:
+                  type: string
+                  description: The name of the widget
+                  example: IFrameWidget
+                props:
+                  type: object
+                  description: JSON object of the widget props
+                  example: { "src": "https://example.com" }
